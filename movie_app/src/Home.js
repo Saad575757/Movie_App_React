@@ -5,7 +5,7 @@ const Home = () => {
   const name = useGlobalcontext();
   return (
     <>
-    <p>My name is {name}</p>
+      <p>My name is {name}</p>
     </>
   )
 }
