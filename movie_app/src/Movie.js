@@ -4,28 +4,20 @@ import { useGlobalcontext } from './Context';
 
 
 const Movie = () => {
+  const{movie}=useGlobalcontext();
   
-  const {movie} = useGlobalcontext();
-  return (
-    <>
-    
-      {
-        movie.map((currentvalue)=>{
-          return(
-            <div>
-        <p>
-          {currentvalue.Title}
-          
-          
-
-        </p>
+  return<>
+  {
+    movie.map((currentdata)=>{
+      return(
+        <div>
+          <p>{currentdata.Title}</p>
         </div>
-          )
-        })
-      }
-    
-    </>
-  )
+      )
+    })
+  }
+  </>
+  
 }
 
 export default Movie;
