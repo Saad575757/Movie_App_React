@@ -20,6 +20,12 @@ const AppProvider = ({ children }) => {
                 setisLoading(false);
                 setMovie(data.Search);
             }
+            else{
+                setisError({
+                    show: true,
+                    msg:data.error,
+                })
+            }
         }catch(error){
             console.log(error);
         }
@@ -29,7 +35,7 @@ const AppProvider = ({ children }) => {
         getMovies(API_URL);
     },[]);
 
-    return <AppContext.Provider value="Saadkhan">{children}</AppContext.Provider>
+    return <AppContext.Provider value={{movie, isLoading, isError}}>{children}</AppContext.Provider>
 }
 
 const useGlobalcontext = () => {
