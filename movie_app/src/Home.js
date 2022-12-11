@@ -1,6 +1,7 @@
 import React from 'react';
 import Movie from './Movie';
 import Search from './Search';
+import './Home.css';
 
 
 
@@ -10,7 +11,9 @@ const Home = () => {
     <>
     
       <Search />
-      <Movie />
+      <div className='movie'>
+      <Movie  />
+      </div>
     </>
   )
 }
