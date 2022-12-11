@@ -15,6 +15,7 @@ const Movie = () => {
           <p>{currentdata.Year}</p>
           <p>{currentdata.imdbID}</p>
           <p>{currentdata.Type}</p>
+          <img src={currentdata.Poster} alt="mypic" className="img"></img>
           
         </div>
       )
