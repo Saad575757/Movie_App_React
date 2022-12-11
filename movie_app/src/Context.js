@@ -40,7 +40,7 @@ const AppProvider = ({ children }) => {
 
     const[isLoading,setisLoading]=useState(true);
     const[movie,setMovie]=useState([]);
-    const[isError,setisError]=useState({show:'false', msg:''});
+    const[isError,setisError ]=useState({show:'false', msg:''});
 
     const getMovies= async(url)=>{
         
@@ -50,7 +50,7 @@ const AppProvider = ({ children }) => {
         const data=await res.json();
         console.log(data);
 
-        if(data.Response==='true'){
+        if(data.Response==="True"){
             setMovie(data.Search);
             setisLoading(false);
 
