@@ -1,28 +1,25 @@
 import React from 'react';
 import { useGlobalcontext } from './Context';
+import { Navlink} from 'react-router-dom';
 
 
 
 const Movie = () => {
   const{movie}=useGlobalcontext();
   
-  return<>
-  {
+  return(
+    <>
+    <section className='movie-page'>
+      <div className='grid grid-4-col'>{
     movie.map((currentdata)=>{
-      return(
-        <div>
-          <p>{currentdata.Title}</p>
-          <p>{currentdata.Year}</p>
-          <p>{currentdata.imdbID}</p>
-          <p>{currentdata.Type}</p>
-          <img src={currentdata.Poster} alt="mypic" className="img"></img>
-          
-        </div>
-      )
-    })
-  }
-  </>
+      const{imdbID, Poster , Title , Year} = currentdata;
+      return<Navlink to='' ></Navlink>
+    })}</div>
+    </section>
   
+ 
+  </>
+  )
 }
 
 export default Movie;
