@@ -12,6 +12,10 @@ const Movie = () => {
       return(
         <div>
           <p>{currentdata.Title}</p>
+          <p>{currentdata.Year}</p>
+          <p>{currentdata.imdbID}</p>
+          <p>{currentdata.Type}</p>
+          
         </div>
       )
     })
