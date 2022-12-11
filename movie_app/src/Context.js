@@ -17,7 +17,7 @@ const AppProvider = ({ children }) => {
 
             
 
-    //         if(data.Reponse==='true'){
+    //         if(data.Reponse==='true'){ Mistake on true
     //             setisLoading(false);
     //             setMovie(data.Search);
     //         }
