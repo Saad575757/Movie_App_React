@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGlobalcontext } from './Context';
-import { Navlink} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 
 
 
@@ -13,7 +13,7 @@ const Movie = () => {
       <div className='grid grid-4-col'>{
     movie.map((currentdata)=>{
       const{imdbID, Poster , Title , Year} = currentdata;
-      return<Navlink to='' ></Navlink>
+      return(<NavLink to={`movie/"${imdbID}"`} ></NavLink>)
     })}</div>
     </section>
   
