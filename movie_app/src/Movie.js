@@ -6,34 +6,34 @@ import './Movie.css';
 
 
 const Movie = () => {
-  const{movie}=useGlobalcontext();
-  
-  return(
+  const { movie } = useGlobalcontext();
+
+  return (
     <>
-    <section className='movie-page'>
-      {
-    movie.map((currentdata)=>{
-      const{imdbID, Poster , Title , Year} = currentdata;
-      return(<NavLink to={`movie/"${imdbID}"`} >
-       
-        <div className='main-card'>
-        <div className='card'>
-          <div className='card_info'>
-            <h2 className='title'>{Title}</h2>
-            <h3 className='year'>{Year}</h3>
-            <img alt={imdbID} src={Poster} className="img"></img>
+      <section className='movie-page'>
+        {
+          movie.map((currentdata) => {
+            const { imdbID, Poster, Title, Year } = currentdata;
+            return (<NavLink to={`movie/"${imdbID}"`} >
 
-          </div>
-          </div> 
-           
+              <div className='main-card'>
+                <div className='card'>
+                  <div className='card_info'>
+                    <h2 className='title'>{Title}</h2>
+                    <h3 className='year'>{Year}</h3>
+                    <img alt={imdbID} src={Poster} className="img"></img>
 
-        </div>
-      </NavLink>)
-    })}
-    </section>
-  
- 
-  </>
+                  </div>
+                </div>
+
+
+              </div>
+            </NavLink>)
+          })}
+      </section>
+
+
+    </>
   )
 }
 
