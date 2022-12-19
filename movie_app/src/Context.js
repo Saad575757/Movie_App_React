@@ -36,7 +36,7 @@ const AppProvider = ({ children }) => {
     //     getMovies(API_URL);
     // },[]);
 
-    const API_URL='https://omdbapi.com/?apikey=727bbdc1&s=titanic';
+    const API_URL="https://omdbapi.com/?apikey=727bbdc1&s=titanic";
 
     const[isLoading,setisLoading]=useState(true);
     const[movie,setMovie]=useState([]);
