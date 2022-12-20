@@ -14,7 +14,7 @@ const Search = () => {
     <h2 className='heading'>Enter you favourite movie name</h2>
     <form action='#' onSubmit={(e)=>{e.preventDefault()}}>
       <div>
-        <input className='input' type='text' placeholder='     Enter movie name' value={querry} onChange={changeEvent}></input>
+        <input className='input' type='text' placeholder=' Search Here' value={querry} onChange={changeEvent}></input>
       </div>
     </form>
     <div className='card-error'>
