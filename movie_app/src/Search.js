@@ -1,5 +1,6 @@
 import React from 'react'
 import { useGlobalcontext } from './Context'
+import './Search.css'
 
 const Search = () => {
   const{ querry,setQuerry, isError} =useGlobalcontext();
@@ -9,11 +10,11 @@ const Search = () => {
  
   return (
     <>
-     <section className='Search-section'>
-    <h2>Enter you favourite movie name</h2>
+     <section className='search-section'>
+    <h2 className='heading'>Enter you favourite movie name</h2>
     <form action='#' onSubmit={(e)=>{e.preventDefault()}}>
       <div>
-        <input type='text' placeholder='Enter movie name' value={querry} onChange={changeEvent}></input>
+        <input className='input' type='text' placeholder='     Enter movie name' value={querry} onChange={changeEvent}></input>
       </div>
     </form>
     <div className='card-error'>
