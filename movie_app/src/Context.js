@@ -36,11 +36,12 @@ const AppProvider = ({ children }) => {
     //     getMovies(API_URL);
     // },[]);
 
-    const API_URL="https://omdbapi.com/?apikey=727bbdc1&s=titanic";
+    const API_URL="https://omdbapi.com/?apikey=727bbdc1";
 
     const[isLoading,setisLoading]=useState(true);
     const[movie,setMovie]=useState([]);
     const[isError,setisError ]=useState({show:'false', msg:''});
+    const[querry,setQuerry]=useState('titanic');
 
     const getMovies= async(url)=>{
         
@@ -68,10 +69,10 @@ const AppProvider = ({ children }) => {
     } 
 
     useEffect(()=>{
-        getMovies(API_URL);
-    },[]);
+        getMovies(`${API_URL}&s=${querry}`);
+    },[querry]);
 
-    return <AppContext.Provider value={{movie,isError,isLoading}}>{children}</AppContext.Provider>
+    return <AppContext.Provider value={{movie,isError,isLoading, setQuerry}}>{children}</AppContext.Provider>
 }
 
 const useGlobalcontext = () => {
