@@ -10,7 +10,7 @@ const Movie = () => {
 
   return (
     <>
-      <section className='movie-page'>
+      <section className='movie-page' >
         {
           movie.map((currentdata) => {
             const { imdbID, Poster, Title, Year } = currentdata;

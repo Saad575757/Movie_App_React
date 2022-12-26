@@ -40,7 +40,7 @@
    justify-content: space-evenly;
 }
 .main-card:hover{
-    background-color: black;
+    background-color: #eebb99;
 }
 .title{
     text-align: center;
