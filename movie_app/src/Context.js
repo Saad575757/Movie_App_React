@@ -3,80 +3,49 @@ import React, { useContext, useEffect, useState } from "react";
 const AppContext = React.createContext(); //context
 //Provider
 const AppProvider = ({ children }) => {
-    // const API_URL = "https://omdbapi.com/?apikey=727bbdc1&s=titanic";
 
-    // const[isLoading,setisLoading]=useState(true);
-    // const[movie,setMovie]=useState([]);
-    // const[isError, setisError]=useState({show: "false", msg:""});
-    
-    // const getMovies=async(url)=>{
-    //     try{
-    //         const res= await fetch(url);
-    //         const data = await res.json();
-    //         console.log(data);
 
-            
+    const API_URL = "https://omdbapi.com/?apikey=727bbdc1";
 
-    //         if(data.Reponse==='true'){ Mistake on true
-    //             setisLoading(false);
-    //             setMovie(data.Search);
-    //         }
-    //         else{
-    //             setisError({
-    //                 show: true,
-    //                 msg:data.error,
-    //             })
-    //         }
-    //     }catch(error){
-    //         console.log(error);
-    //     }
+    const [isLoading, setisLoading] = useState(true);
+    const [movie, setMovie] = useState([]);
+    const [isError, setisError] = useState({ show: 'false', msg: '' });
+    const [querry, setQuerry] = useState('Batman');
 
-    // }
-    // useEffect(()=>{
-    //     getMovies(API_URL);
-    // },[]);
+    const getMovies = async (url) => {
 
-    const API_URL="https://omdbapi.com/?apikey=727bbdc1";
 
-    const[isLoading,setisLoading]=useState(true);
-    const[movie,setMovie]=useState([]);
-    const[isError,setisError ]=useState({show:'false', msg:''});
-    const[querry,setQuerry]=useState('Batman');
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            console.log(data);
 
-    const getMovies= async(url)=>{
-        
+            if (data.Response === "True") {
+                setMovie(data.Search);
+                setisLoading(false);
 
-        try{
-            const res= await fetch(url);
-        const data=await res.json();
-        console.log(data);
+            }
+            else {
+                setisError({
+                    show: true,
+                    msg: data.error,
+                })
+            }
 
-        if(data.Response==="True"){
-            setMovie(data.Search);
-            setisLoading(false);
-
-        }
-        else{
-            setisError({
-                show: true,
-                msg: data.error,
-            })
-        }
-
-        }catch(error){
+        } catch (error) {
             console.log(error)
         }
-    } 
+    }
 
-    useEffect(()=>{
-        let timerOut=setTimeout(() => {
+    useEffect(() => {
+        let timerOut = setTimeout(() => {
             getMovies(`${API_URL}&s=${querry}`);
         }, 1000);
-        return ()=> clearTimeout(timerOut);
-       
-    },[querry]);
+        return () => clearTimeout(timerOut);
 
-    return <AppContext.Provider value={{movie,isError,isLoading, setQuerry}}>{children}</AppContext.Provider>
+    }, [querry]);
+
+    return <AppContext.Provider value={{ movie, isError, isLoading, setQuerry }}>{children}</AppContext.Provider>
 }
 
 const useGlobalcontext = () => {
