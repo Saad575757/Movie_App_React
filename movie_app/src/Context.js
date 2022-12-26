@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
             else {
                 setisError({
                     show: true,
-                    msg: data.error,
+                    msg: data.Error,
                 })
             }
 
