@@ -1,5 +1,5 @@
 import React,{useState, useEffect, } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams , NavLink} from 'react-router-dom';
 import { API_URL } from './Context';
 import './Singlemovie.css';
 
@@ -63,6 +63,7 @@ const Singlemovie = () => {
           <p>{movie.Country}</p>
           <p>{movie.Genre}</p>
         </div>
+        <NavLink to='/'>Go back</NavLink>
       </div>
     </div>
     </>
