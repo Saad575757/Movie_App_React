@@ -46,15 +46,15 @@ const Singlemovie = () => {
     )
   }
   return (
-    <>
+    
     <section className='movie-page'>
       <div className='movie-card'>
         <figure>
-          <img alt='' src={movie}></img>
+          <img alt='' src={movie.Poster}></img>
         </figure>
       </div>
     </section>
-    </>
+    
   )
 }
 
