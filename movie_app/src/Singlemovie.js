@@ -45,6 +45,7 @@ const Singlemovie = () => {
       </div>
     )
   }
+  else{
   return (
     
     <section className='movie-page'>
@@ -56,6 +57,7 @@ const Singlemovie = () => {
     </section>
     
   )
+  }
 }
 
 export default Singlemovie;
