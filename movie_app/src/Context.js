@@ -14,7 +14,7 @@ const AppProvider = ({ children }) => {
     const [querry, setQuerry] = useState('Batman');
 
     const getMovies = async (url) => {
-
+        setisLoading(true);
 
         try {
             const res = await fetch(url);

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { API_URL } from './Context';
 
 const Singlemovie = () => {
-  const {id}= useParams()
+  const {id}= useParams();
   const [isLoading, setisLoading ] = useState(true);
   const [movie, setMovie] = useState('');
   
