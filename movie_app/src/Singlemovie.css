@@ -1,0 +1,11 @@
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30ex;
+    font-size: 45px;
+    font-weight: bolder;
+}
+.body{
+    background-color: gray;
+}

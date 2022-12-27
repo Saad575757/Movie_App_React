@@ -15,7 +15,7 @@ const Movie = () => {
           movie.map((currentdata) => {
             const { imdbID, Poster, Title, Year } = currentdata;
             const moviename= Title.substring(0,15);
-            return (<NavLink to={`movie/"${imdbID}"`} >
+            return (<NavLink to={`movie/${imdbID}`} >
 
               <div className='main-card'>
                 <div className='card'>

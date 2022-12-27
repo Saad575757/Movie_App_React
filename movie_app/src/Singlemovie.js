@@ -1,6 +1,7 @@
 import React,{useState, useEffect, } from 'react'
 import { useParams } from 'react-router-dom';
 import { API_URL } from './Context';
+import './Singlemovie.css';
 
 const Singlemovie = () => {
   const {id}= useParams();
@@ -47,14 +48,24 @@ const Singlemovie = () => {
   }
   else{
   return (
-    
-    <section className='movie-page'>
+    <>
+    <div className='movie-page'>
       <div className='movie-card'>
         <figure>
           <img alt='' src={movie.Poster}></img>
+          
         </figure>
+        <div className='movie-container'>
+          <p>{movie.Title}</p>
+          <p>{movie.Released}</p>
+          <p>{movie.imdbRating}/10</p>
+          <p>{movie.Type}</p>
+          <p>{movie.Country}</p>
+          <p>{movie.Genre}</p>
+        </div>
       </div>
-    </section>
+    </div>
+    </>
     
   )
   }
