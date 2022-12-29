@@ -1,3 +1,4 @@
+
 .loading{
     display: flex;
     align-items: center;
@@ -9,17 +10,27 @@
 .movie-card{
     height: 60px;
     width: 200px;
+    
+}
+.img{
+    margin-left: 20px;
+    height: 297px;
+    width: 230px;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+
 }
 .movie-container{
-    height: 283px;
+    height: 295px;
     width: 230px;
     margin-left: 90px;
-    margin-top: 258px;
+    margin-top: 270px;
     font-weight: bolder;
-    border: 1px solid;
+    border: 0.5px white;
     padding-left: 10px;
     padding-right: 10px;
-    
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
 }
 .movie-page{
     display: flex;

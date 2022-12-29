@@ -53,12 +53,12 @@ const Singlemovie = () => {
     <div className='movie-page'>
       <div className='movie-card'>
         <figure>
-          <img alt='' src={Poster} className="img"></img>
+          <img alt='' src={Poster} className="img" ></img>
           
         </figure>
         </div>
         <div className='movie-container'>
-          <p className='title'>{Title}</p>
+          <h4 className='title'>{Title}</h4>
           <p className='type'>{Type}</p>
           <p className='genre'>{Genre}</p>
           <p className='country'>{Country}</p>
