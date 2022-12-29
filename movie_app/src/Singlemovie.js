@@ -58,13 +58,13 @@ const Singlemovie = () => {
         </figure>
         </div>
         <div className='movie-container'>
-          <p>{Title}</p>
-          <p>{Type}</p>
-          <p>{Genre}</p>
-          <p>{Country}</p>
-          <p>{Released}</p>
-          <p>{imdbRating}/10</p>
-          <NavLink to='/'>Go back</NavLink>
+          <p className='title'>{Title}</p>
+          <p className='type'>{Type}</p>
+          <p className='genre'>{Genre}</p>
+          <p className='country'>{Country}</p>
+          <p className='release'>{Released}</p>
+          <p className='rating'>{imdbRating}/10</p>
+          <NavLink to='/' className='button'>Go back</NavLink>
           
         </div>
         
