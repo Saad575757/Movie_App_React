@@ -1,7 +1,7 @@
 .card {
 
-    height: 350px;
-    width: 250px;
+    height: 380px;
+    width: 280px;
     color: black;
     background-color: #6a8f8985;
 
@@ -26,12 +26,12 @@
 }
 
 .main-card {
-    height: 410px;
-    width: 300px;
+    height: 420px;
+    width: 320px;
     border: 1px solid #000;
     background-color: white;
     margin-left: 30px;
-    padding-top: 20px;
+    padding-top: 10px;
     margin-top: 30px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .main-card:hover {
-    background-color: #eebb99;
+    background-color: #A9F1DF;
 }
 
 .title {
