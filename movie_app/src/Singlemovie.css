@@ -6,3 +6,24 @@
     font-size: 45px;
     font-weight: bolder;
 }
+.movie-card{
+    height: 60px;
+    width: 200px;
+}
+.movie-container{
+    height: 285px;
+    width: 230px;
+    margin-left: 90px;
+    margin-top: 258px;
+    font-weight: bolder;
+    background-color: brown;
+    
+    
+}
+.movie-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}

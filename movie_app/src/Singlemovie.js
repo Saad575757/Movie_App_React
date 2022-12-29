@@ -53,9 +53,10 @@ const Singlemovie = () => {
     <div className='movie-page'>
       <div className='movie-card'>
         <figure>
-          <img alt='' src={Poster}></img>
+          <img alt='' src={Poster} className="img"></img>
           
         </figure>
+        </div>
         <div className='movie-container'>
           <p>{Title}</p>
           <p>{Type}</p>
@@ -63,10 +64,11 @@ const Singlemovie = () => {
           <p>{Country}</p>
           <p>{Released}</p>
           <p>{imdbRating}/10</p>
+          <NavLink to='/'>Go back</NavLink>
           
         </div>
-        <NavLink to='/'>Go back</NavLink>
-      </div>
+        
+      
     </div>
     </>
     
