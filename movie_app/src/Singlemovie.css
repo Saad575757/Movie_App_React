@@ -11,19 +11,57 @@
     width: 200px;
 }
 .movie-container{
-    height: 285px;
+    height: 283px;
     width: 230px;
     margin-left: 90px;
     margin-top: 258px;
     font-weight: bolder;
-    background-color: brown;
-    
+    border: 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
     
 }
 .movie-page{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+   
     
+}
+.title{
+    text-align: center;
+}
+.type{
+    text-align: center;
+}
+.genre{
+    text-align: center;
+}
+.release{
+    text-align: center;
+}
+.country{
+    text-align: center;
+}
+.rating{
+    text-align: center;
+}
+.button{
+    background-color:  white; 
+  border: none;
+  color:  #4CAF50;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  padding-bottom: 2.5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover{
+    background-color: #4CAF50;
+    color: white;
 }
