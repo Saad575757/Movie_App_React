@@ -47,21 +47,23 @@ const Singlemovie = () => {
     )
   }
   else{
+    const {Poster, Title, Released, imdbRating, Type,Country, Genre}=movie
   return (
     <>
     <div className='movie-page'>
       <div className='movie-card'>
         <figure>
-          <img alt='' src={movie.Poster}></img>
+          <img alt='' src={Poster}></img>
           
         </figure>
         <div className='movie-container'>
-          <p>{movie.Title}</p>
-          <p>{movie.Released}</p>
-          <p>{movie.imdbRating}/10</p>
-          <p>{movie.Type}</p>
-          <p>{movie.Country}</p>
-          <p>{movie.Genre}</p>
+          <p>{Title}</p>
+          <p>{Type}</p>
+          <p>{Genre}</p>
+          <p>{Country}</p>
+          <p>{Released}</p>
+          <p>{imdbRating}/10</p>
+          
         </div>
         <NavLink to='/'>Go back</NavLink>
       </div>
